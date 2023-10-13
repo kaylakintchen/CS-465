@@ -24,7 +24,7 @@ const renderTravelList = (rec, res, responseBody) => {
 
 /* get travel list*/
 const travelList = (req, res) => {
-  const path = "/app_api/trips";
+  const path = "/api/trips"; // updated path
   const requestOptions = {
     url: `${apiOptions.server}${path}`,
     method: "GET",
