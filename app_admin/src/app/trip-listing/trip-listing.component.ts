@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 // import { trips } from '../data/trips';
-import { TripDataService } from 'services/trip-data.service';
+import { TripDataService } from 'src/app/services/trip-data.service';
 import { Trip } from 'models/trip';
 
 @Component({

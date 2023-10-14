@@ -10,7 +10,8 @@ export class TripCardComponent implements OnInit {
   @Input('trip') trip: any;
   constructor() { }
 
-  ngOnInit() {
+  // added ": void" 10/13 step 23 pdf
+  ngOnInit(): void {
   }
 
 }
