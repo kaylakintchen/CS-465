@@ -18,6 +18,7 @@ export class TripListingComponent implements OnInit {
 
   constructor(private tripDataService: TripDataService) { }
 
+
   private getTrips(): void {
     console.log('Inside TripListingComponent#getTrips');
     this.message = 'Searching for trips';
