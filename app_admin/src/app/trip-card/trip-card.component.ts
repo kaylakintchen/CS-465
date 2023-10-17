@@ -1,4 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
+import { Router } from "@angular/router";
+import { Trip } from '../../../models/trip';
+import { AuthenticationService } from '../services/authentication';
 
 @Component({
   selector: 'app-trip-card',
@@ -7,11 +10,24 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TripCardComponent implements OnInit {
 
-  @Input('trip') trip: any;
-  constructor() { }
+  @Input('trip') trip: Trip;
 
-  // added ": void" 10/13 step 23 pdf
-  ngOnInit(): void {
+  constructor(
+    private router: Router,
+    private authService: AuthenticationService
+  ) { }
+
+  ngOnInit() {
+  }
+
+  private editTrip(trip: Trip): void {
+    localStorage.removeItem("tripCode");
+    localStorage.setItem("tripCode", trip.code);
+    this.router.navigate(['edit-trip']);
+  }
+
+  public isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
   }
 
 }
