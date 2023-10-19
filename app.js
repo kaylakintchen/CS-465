@@ -47,14 +47,7 @@ app.use("/api", (req, res, next) => {
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-app.use("/travel", travelRouter);
-app.use("/rooms", roomsRouter);
-app.use("/news", newsRouter);
-app.use("/meals", mealsRouter);
-app.use("/contact", contactRouter);
-app.use("/about", aboutRouter);
-
-app.use("/api", apiRouter);
+// removed unnecessary routers
 
 app.use((err, req, res, next) => {
   if (err.name === "UnauthorizedError") {
