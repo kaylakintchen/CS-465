@@ -1,10 +1,10 @@
 import { Injectable, Inject } from "@angular/core";
 import { Http, Headers } from "@angular/http";
 
-import { Trip } from "../../../models/trip";
+import { Trip } from "../models/trip";
 import { BROWSER_STORAGE } from "../storage";
-import { User } from "../../../models/user";
-import { AuthResponse } from "../../../models/authresponse";
+import { User } from "../models/user";
+import { AuthResponse } from "../models/authresponse";
 
 @Injectable()
 export class TripDataService {

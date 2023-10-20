@@ -11,8 +11,15 @@ const auth = jwt({
   algorithms: ["HS256"],
 });
 
-router.route("/login").post(authController.login);
-router.route("/register").post(authController.register);
+router
+  .route("/login")
+  .post(authController.login);
+
+router
+  .route("/register") 
+  .post(authController.register);
+
+
 
 router
   .route("/trips")

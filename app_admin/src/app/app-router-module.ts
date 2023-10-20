@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
     { path: 'add-trip',component: AddTripComponent },
     { path: 'edit-trip', component: EditTripComponent},
-    { path: '', component: TripListingComponent, pathMatch: 'full'},
+    { path: '', component: HomeComponent, pathMatch: 'full'},
     { path: 'login', component: LoginComponent },
     { path: 'list-trips', component: TripListingComponent },
 ]

@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
 import { BROWSER_STORAGE } from '../storage';
-import { User } from '../../../models/user';
-import { AuthResponse } from '../../../models/authresponse';
+import { User } from '../models/user';
+import { AuthResponse } from '../models/authresponse';
 import { TripDataService } from '../services/trip-data.service';
 
 @Injectable({
