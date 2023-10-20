@@ -56,7 +56,8 @@ export class EditTripComponent implements OnInit {
       this.tripService.updateTrip(this.editForm.value)
         .then(data => {
           console.log(data);
-          this.router.navigate(['']);
+          localStorage.removeItem("tripCode"); 
+          this.router.navigate(['list-trips']);
       });
     }
   }

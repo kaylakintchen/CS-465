@@ -28,11 +28,8 @@ router
 
 router
   .route("/trips/:tripCode")
-  .get(tripsController.tripsList)
+  .get(tripsController.tripsFindCode)
   .put(auth, tripsController.tripsUpdateTrip);
 
-router
-    .route("/trips/:tripCode")
-    .get(tripsController.tripsFindCode);
 
 module.exports = router;
